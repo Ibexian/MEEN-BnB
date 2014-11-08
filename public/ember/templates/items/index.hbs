@@ -1,0 +1,26 @@
+<div id='outer'><div class='conta'>
+			<h1>All Gear</h1>
+			<div class='item-list'>
+
+					{{#each}}
+					
+
+					{{#if name}}
+					<div class='per-item' >
+						{{#link-to 'items.item' id}}
+						<div class='title'><h3 {{bind-attr class='type'}}>{{{name}}}</h3></div>
+						<div class='type'>{{type}}</div>
+						
+						<img {{bind-attr src='photo'}}>
+						<div class='itemDesc'>{{itemDesc}}</div>{{/link-to}}
+						<div>Added on {{formatDate created "short"}}{{#if userid.username}} <div class='username'>by {{userid.username}}</div>{{/if}}</div>
+						
+						</div>
+						{{/if}}
+					
+					
+					{{/each}}
+
+			</div>
+</div>
+</div>

@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="row">
+        <div class="eachItem">
+{{#if isEditing}}
+	<form class="form-horizontal">
+    <div class="control-group">
+    	<label class='control-label' for='name'>Name</label>
+
+    	<div class='controls'>
+    		{{input type='text' value=content.name id='name' placeholder='Item Name'}}
+	    	</input>
+	    </div>
+
+	    <div class='controls'>
+	    	<span class='question'>{{types.question}}</span>
+	    	{{radio-group content=controllers.items.types.choices
+							selection=content.type
+							value=controllers.items.types.answer
+							name=controllers.items.types.name
+							}}
+		</div>
+	</div>
+	<div class="control-group">
+		<!-- I still have no idea how this works -->
+		{{file-upload url="/items/upload" value=content.photo}}
+	</div>
+    <div class='control-group'>
+		<div class='controls'>
+			<label class="control-label" for="itemDesc">Item Description</label>
+    		{{textarea id='itemDesc' value=content.itemDesc cols='60' rows='6' placeholder="Tell everyone how awesome your gear is"}}
+    	</div>
+    </div>
+    <div class='control-group'>
+    	<div class='controls'>
+			<label class="control-label" for="value">Value</label>
+			{{input type='text' value=content.value id='value' placeholder='Item Value'}}
+		</div>
+		<div class='controls'>
+			<label class="control-label" for="rate">Rental Rate</label>
+			{{input type='text' value=content.rate id='rate' placeholder='Rate'}}
+		</div>
+    </div>
+    <!-- I will also need to add
+    The ability to have black out dates at this point on the page -->
+    <div class='control-group'>
+    	<div class='controls'>
+    		<button class="btn" {{action 'saveEdit'}}>Update</button><button class='btn btn-error' {{action 'removeItem'}}>Delete Item</button>
+    	</div>
+    </div>
+{{else}}
+	<div class='item'>
+		<h1>{{content.name}}</h1>
+	<h5> <a href='#/users/{{unbound "content.userid.id"}}'>{{content.userid.username}}	<img style='height:20px;'{{bind-attr src='content.userid.showAvatar'}}></a></h5>
+	<h5>Location: {{content.userid.location}}</h5>
+
+		<a {{bind-attr href='content.photo'}}><img {{bind-attr src='content.photo' }}></a>
+		<h4>Gear Category: {{content.type}}</h4>
+		<h4>Added on {{formatDate created 'short'}}</h4>
+		
+		<div class='itemDesc'>
+			{{content.itemDesc}}
+		</div>
+		<div>
+			<div><strong>Rate: </strong>${{content.rate}}</div><div><strong> Value: </strong>${{content.value}}</div>
+			<div style='float:right; margin-top:-35em;'>
+			<div id='leftInline' style='display:inline-block'></div>
+			<div id='rightInline' style='display:inline-block'></div>
+		</div>
+
+		</div>
+
+{{/if}}
+	{{#if isOwner}}
+        <button class='btn' {{action 'editItem'}}>Edit</button>
+    </div>
+    {{else}}
+            <button class='btn' {{action 'editItem'}}>Buy</button>
+    </div>
+    {{/if}}
+
+
+</div>
+</div>
+</div>
+<script src='/lib/rome/dist/rome.js'></script>
+<script type="text/javascript">
+rome(leftInline, {
+  time: false,
+  dateValidator: rome.val.beforeEq(rightInline)
+});
+
+rome(rightInline, {
+  time: false,
+  dateValidator: rome.val.afterEq(leftInline)
+});
+</script>

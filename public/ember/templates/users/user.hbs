@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="eachItem">
+{{#if isEditing}}
+	<form class="form-horizontal">
+    <div class='control-group'>
+                <label class='control-label' for='name'>Name</label>
+
+        <div class='controls'>
+            {{input type='text' value=content.name id='name' placeholder='Item Name'}}
+            </input>
+        </div>
+
+    <div class="control-group">
+        {{file-upload url="/users/upload" value=content.avatar}}
+    </div>
+
+                <label class='control-label' for='location'>Location</label>
+
+        <div class='controls'>
+            {{view App.AutoCompleAddressView id='location' value=content.location}}
+        </div>
+        <div class='controls'>
+            <label class="control-label" for="itemDesc">About Me: </label>
+            {{textarea id='itemDesc' value=content.aboutMe cols='60' rows='4' placeholder="How do you spend your time outdoors?"}}
+        </div>
+    	<div class='controls'>
+    		<button class="btn" {{action 'saveEdit'}}>Update</button>
+    	</div>
+    </div>
+{{else}}
+    <div class='item'>
+        <a {{bind-attr href='content.avatar'}}><img {{bind-attr src='content.showAvatar' }} ></a>
+        <h2>{{content.name}}</h2>
+        <h3>{{content.username}}</h3>
+        <h4>Joined {{formatDate created 'short'}}</h4>
+        <h4><a href='/#/items/user/{{unbound content.id}}'>My Gear</a></h4>
+        <div class='aboutMe'>
+            {{content.aboutMe}}
+        </div>
+        <h3>Location: {{content.location}}</h3>
+        {{#if auth.user.hasAuthorization}}
+        <button class='btn' {{action 'editItem'}}>Edit</button>
+        {{/if}}
+       
+    </div>
+{{/if}}
+</div>
+</div>
+</div>

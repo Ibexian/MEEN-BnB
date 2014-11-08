@@ -1,0 +1,52 @@
+<div class='container'>
+	<div class='row'>
+		<div class='eachItem'>
+			<h4>Add your Gear!</h4>
+			<section>
+				<form class='form-horizontal'>
+					<div class='control-group'>
+						<div class='controls'>
+							{{input type='text' value=content.name id='name' placeholder='Item Name'}}
+						</div>
+						<div class='controls'>
+							{{input type='text' value=content.brand id='brand' placeholder='Brand'}}
+						</div>
+						<div class='controls'>
+							<span class='question'>{{controllers.items.question}}</span>
+							{{radio-group content=controllers.items.types.choices
+							selection=content.type
+							value=controllers.items.types.answer
+							name=controllers.items.types.name
+							}}
+						</div>
+					</div>
+					<div class="control-group">
+						<!-- I still have no idea how this works -->
+                    		{{file-upload url="/items/upload" value=content.photo}}
+                    </div>
+                    <div class='control-group'>
+                    	<div class='controls'>
+                    		{{textarea id='itemDesc' value=content.itemDesc cols='60' rows='4' placeholder="Tell everyone how awesome your gear is"}}
+                    	</div>
+                    </div>
+                    <div class='control-group'>
+                    	<div class='controls'>
+							{{input type='text' value=content.value id='value' placeholder='Item Value'}}
+						</div>
+						<div class='controls'>
+							{{input type='text' value=content.rate id='rate' placeholder='Rate'}}
+						</div>
+                    </div>
+                    <!-- I will also need to add
+                    The ability to have black out dates at this point on the page -->
+                    <div class='control-group'>
+                    	<div class='controls'>
+                    		<button class="btn" {{action 'createItem'}}>Add to the Shed!</button>
+                    	</div>
+                    </div>
+				</form>
+			</section>
+        </div>
+    </div>
+</div>
+			

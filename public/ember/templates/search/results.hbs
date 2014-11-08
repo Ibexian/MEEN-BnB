@@ -1,0 +1,29 @@
+<div id='outer'><div class='conta'>
+			<h1>Results</h1>
+			<div class='item-list'>
+					{{#if model}}
+						{{#each model}}
+						
+
+							{{#if name}}
+							<div class='per-item' >
+								{{#link-to 'items.item' id}}
+								<div class='title'><h3 {{bind-attr class='type'}}>{{{name}}}</h3></div>
+								<div class='type'>{{type}}</div>
+								
+								<img {{bind-attr src='photo'}}>
+								<div class='itemDesc'>{{itemDesc}}</div>{{/link-to}}
+								<div>Added on {{formatDate created "short"}}{{#if userid.username}} <div class='username'>by {{userid.username}}</div>{{/if}}</div>
+								
+								</div>
+							{{/if}}
+						
+						
+						{{/each}}
+					{{else}}
+					<h2 style='color:white;'>No Results to Display</h2>
+					{{/if}}
+
+			</div>
+</div>
+</div>
