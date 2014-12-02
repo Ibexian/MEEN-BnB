@@ -34,12 +34,12 @@
         <h2>{{content.name}}</h2>
         <h3>{{content.username}}</h3>
         <h4>Joined {{formatDate created 'short'}}</h4>
-        <h4><a href='/#/items/user/{{unbound content.id}}'>My Gear</a></h4>
+        <h4><a href='/#/items/user/{{unbound content.id}}'> {{#if isOwner}}My{{else}}{{content.username}}'s{{/if}} Gear</a></h4>
         <div class='aboutMe'>
             {{content.aboutMe}}
         </div>
         <h3>Location: {{content.location}}</h3>
-        {{#if auth.user.hasAuthorization}}
+        {{#if isOwner}}
         <button class='btn' {{action 'editItem'}}>Edit</button>
         {{/if}}
        

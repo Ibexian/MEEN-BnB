@@ -141,6 +141,7 @@ exports.update = function(req, res) {
     user.name = req.body.user.name;
     user.aboutMe = req.body.user.aboutMe;
     user.location = req.body.user.location;
+    //need to add new location types here
     user.username = req.body.user.username;
     user.avatar = '/img/uploads/' + user._id + fileType;
 

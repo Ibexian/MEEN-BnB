@@ -25,7 +25,12 @@ App.ItemsCreateController = Ember.Controller.extend({
 });
 
 App.ItemsItemController = Ember.Controller.extend({
-    needs: ['items'],
+    needs: ['application', 'items'],
+    isEditing: false,
+    isOwner: true,
+    init: function(){
+        console.log(this.get('content.name'));
+    },
     actions: {
         editItem: function() {
             this.set('isEditing', true);
@@ -45,12 +50,9 @@ App.ItemsItemController = Ember.Controller.extend({
             item.save();
             this.transitionToRoute('items.index');
         }
-    },
-    isEditing: false,
-    isOwner: true
+    }
 
 });
-
 
 App.ItemsController = Ember.Controller.extend({
     types: {

@@ -1,3 +1,14 @@
+    <script type="text/javascript">
+    rome(leftInline, {
+      time: false,
+      dateValidator: rome.val.beforeEq(rightInline)
+    });
+
+    rome(rightInline, {
+      time: false,
+      dateValidator: rome.val.afterEq(leftInline)
+    });
+    </script>
 <div class="container">
     <div class="row">
         <div class="eachItem">
@@ -70,7 +81,7 @@
 		</div>
 
 {{/if}}
-	{{#if isOwner}}
+	{{#if content.userid}}
         <button class='btn' {{action 'editItem'}}>Edit</button>
     </div>
     {{else}}
@@ -82,15 +93,3 @@
 </div>
 </div>
 </div>
-<script src='/lib/rome/dist/rome.js'></script>
-<script type="text/javascript">
-rome(leftInline, {
-  time: false,
-  dateValidator: rome.val.beforeEq(rightInline)
-});
-
-rome(rightInline, {
-  time: false,
-  dateValidator: rome.val.afterEq(leftInline)
-});
-</script>
