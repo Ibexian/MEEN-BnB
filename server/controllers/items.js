@@ -195,6 +195,7 @@ exports.destroy = function(req, res) {
  * Show an item
  */
 exports.show = function(req, res) {
+    req.item.username == req.user.username ? req.item.userAuth = 'true' : req.item.userAuth = '';
     res.send({
         item: req.item
     });

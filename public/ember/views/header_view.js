@@ -30,3 +30,7 @@ App.AutoCompleteIndexView = Ember.TextField.extend({
         new google.maps.places.Autocomplete(this.$()[0], options);
     }
 });
+
+App.ItemsItemView = Ember.View.extend({
+    user: global.user
+});

@@ -27,13 +27,13 @@ App.ItemsCreateController = Ember.Controller.extend({
 App.ItemsItemController = Ember.Controller.extend({
     needs: ['application', 'items'],
     isEditing: false,
-    isOwner: true,
-    init: function(){
-        console.log(this.get('content.name'));
-    },
+    isOwner: false,
     actions: {
         editItem: function() {
             this.set('isEditing', true);
+        },
+        buyItem: function(){
+            console.log('buy me');
         },
         saveEdit: function() {
             this.set('isEditing', false);

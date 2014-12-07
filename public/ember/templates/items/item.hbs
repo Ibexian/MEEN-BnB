@@ -81,11 +81,12 @@
 		</div>
 
 {{/if}}
-	{{#if content.userid}}
+	{{#if content.userAuth}}
         <button class='btn' {{action 'editItem'}}>Edit</button>
     </div>
     {{else}}
-            <button class='btn' {{action 'editItem'}}>Buy</button>
+    	{{content.userAuth}}
+            <button class='btn' {{action 'buyItem'}}>Buy</button>
     </div>
     {{/if}}
 

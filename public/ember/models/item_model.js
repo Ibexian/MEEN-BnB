@@ -7,5 +7,6 @@ App.Item = DS.Model.extend({
     value: DS.attr('string'),
     rate: DS.attr('string'),
     username: DS.attr('string'),
+    userAuth: DS.attr('string'),
     userid: DS.belongsTo('user')
 });
