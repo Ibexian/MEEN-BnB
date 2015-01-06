@@ -1,0 +1,364 @@
+@import url("/lib/rome/dist/rome.css");
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\000033}}
+html, body {
+  margin: 30px 0;
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\000039}}
+img {
+  max-height: 150px;
+  max-width: 200px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\0000313}}
+p {
+  padding: 15px;
+}
+
+@font-face {
+  font-family: 'modern_sansregular';
+  src: url("font/moderne_sans-webfont.eot");
+  src: url("font/moderne_sans-webfont.eot?#iefix") format("embedded-opentype"), url("font/moderne_sans-webfont.woff") format("woff"), url("font/moderne_sans-webfont.ttf") format("truetype"), url("font/moderne_sans-webfont.svg#modern_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'concourse_t6regular';
+  src: url("font/concourse_t6_regular-webfont.eot");
+  src: url("font/concourse_t6_regular-webfont.eot?#iefix") format("embedded-opentype"), url("font/concourse_t6_regular-webfont.woff") format("woff"), url("font/concourse_t6_regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\0000339}}
+.modal-dialog {
+  width: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\0000345}}
+.woof-message {
+  cursor: pointer;
+  height: 100px;
+  width: 150px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\0000359}}
+.woof-message:hover button.close {
+  color: #000;
+  opacity: .5;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\0000367}}
+div.x-woof-message-container.pre-insert, div.x-woof-message-container.destroyed {
+  /*   -webkit-transform: scaleY(0); */
+  opacity: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\0000375}}
+div.x-woof-message-container {
+  /*   -webkit-transform: scaleY(1);
+-webkit-transform-origin: top;
+ */
+  -webkit-transition: all 0.25s ease;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\0000385}}
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003103}}
+.horizontal-center-top {
+  margin: auto;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  z-index: 9999;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003121}}
+.bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  overflow: auto;
+  z-index: 9999;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003135}}
+.loading div {
+  margin: 0 auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003141}}
+.loader {
+  margin: 0 auto;
+  background-image: url(/img/loaders/loader-pacman.gif);
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003155}}
+.full-size-photo-viewer {
+  opacity: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003159}}
+.full-size-photo-viewer .modal-body {
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003165}}
+.full-size-photo-viewer .photo {
+  width: 80%;
+  margin: 0;
+  float: left;
+  background-color: #000;
+  height: 100%;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003173}}
+.full-size-photo-viewer .photo img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003191}}
+.full-size-photo-viewer .side-panel {
+  float: left;
+  height: 100%;
+  width: 20%;
+  margin: 0;
+  background-color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003206}}
+#logo {
+  height: 90px;
+  margin-top: -0.8em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003211}}
+h1 {
+  font-family: 'concourse_t6regular';
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003213}}
+body {
+  background: url("/img/shed.JPG") fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003223}}
+.product {
+  display: block;
+  width: 100px;
+  border-radius: 5px;
+  background: #efefef;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  padding: 4px 10px;
+  cursor: copy;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003233}}
+#outer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003238}}
+#outer .conta {
+  padding: 1.5em;
+  border-radius: 3px;
+  max-width: 90em;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/\.rvm\/gems\/ruby-2\.1\.1\/gems\/susy-2\.1\.3\/sass\/susy\/output\/support\/_clearfix\.scss}line{font-family:\0000312}}
+#outer .conta:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003242}}
+#outer .conta h1 {
+  font-size: 300%;
+  font-weight: bold;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003248}}
+#outer .conta .item-list {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003250}}
+#outer .conta .item-list .per-item {
+  background: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-align: center;
+  height: 350px;
+  width: 400px;
+  margin: 1em auto;
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003260}}
+#outer .conta .item-list .per-item:nth-child(2n) {
+  margin-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003263}}
+#outer .conta .item-list .per-item:nth-child(4n) {
+  float: right;
+  margin-right: 0;
+  margin-bottom: 2em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003267}}
+#outer .conta .item-list .per-item .itemDesc {
+  padding: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003270}}
+#outer .conta .item-list .per-item .title {
+  color: white;
+  font-weight: bold;
+  background: #f39c12;
+  width: 104%;
+  margin-left: -2%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003276}}
+#outer .conta .item-list .per-item .title a {
+  color: white;
+  margin-left: 2%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003281}}
+#outer .conta .item-list .per-item .Tents {
+  background: #27ae60;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003284}}
+#outer .conta .item-list .per-item .Bags {
+  background: #e74c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003287}}
+#outer .conta .item-list .per-item .Kayaks {
+  background: #2980b9;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003294}}
+.eachItem {
+  margin: 3em auto;
+  padding: 2em;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #eee;
+  text-align: center;
+  border-radius: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003301}}
+.eachItem img {
+  max-height: 350px;
+  max-width: 400px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003308}}
+.item button {
+  margin: 1em 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003312}}
+.item .itemDesc {
+  margin: 1em auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003316}}
+.topper {
+  margin: -2em 0 0 0;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 10% auto 18%;
+  width: 940px;
+  padding: 3em;
+  text-align: center;
+  border-radius: 5px;
+  font-family: 'modern_sansregular' !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003329}}
+.topper h1 {
+  color: white;
+  font-size: 500%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003334}}
+.topper input {
+  font-size: 1.25em;
+  line-height: 2.25em;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003340}}
+.topper input .ember-text-field {
+  margin-left: 0.5em;
+  width: 25em !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003345}}
+.topper button {
+  margin-left: 1em;
+  color: white;
+  font-size: 1.5em;
+  vertical-align: baseline;
+  background: #f39c12;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003354}}
+.mainPage {
+  width: 100%;
+  background: white;
+  margin: 0 auto;
+  padding: 5em 15%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003359}}
+.mainPage #scrollGuide {
+  width: 100%;
+  margin: -1em auto 2em;
+  text-align: center;
+  vertical-align: top;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003368}}
+.navbar-brand {
+  font-size: 200%;
+  margin: 5px auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003372}}
+.navbar-right {
+  margin: 5px auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003375}}
+label {
+  display: inline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/William\/gearsheddeux\/public\/sass\/main\.scss}line{font-family:\00003379}}
+.aboutMe {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
