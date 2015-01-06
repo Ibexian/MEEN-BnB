@@ -42,6 +42,16 @@ module.exports = function(app, passport, db) {
     app.enable("jsonp callback");
 
     app.configure(function() {
+        var configured = {
+            db: {
+                db: 'heroku_app32115226',
+                port: 63180, 
+                host: 'ds063180.mongolab.com',
+                username: 'gearshed',
+                password: 'thisisthegearshed',
+                collection: 'sessions'
+            }
+        };
         //cookieParser should be above session
         app.use(express.cookieParser());
 
@@ -52,10 +62,7 @@ module.exports = function(app, passport, db) {
         //express/mongo session storage
         app.use(express.session({
             secret: 'MEAN',
-            store: new mongoStore({
-                db: db.connection.db,
-                collection: 'sessions'
-            })
+            store: new mongoStore(configured.db)
         }));
 
 
