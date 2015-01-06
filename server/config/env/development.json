@@ -1,5 +1,5 @@
 {
-    "db": "mongodb://gearshed:thisisthegearshed@ds063180.mongolab.com:63180?authSource=heroku_app32115226",
+    "db": "mongodb://gearshed:thisisthegearshed@ds063180.mongolab.com:63180/heroku_app32115226",
     "app": {
         "name": "GearShed - Share the Outdoors"
     },
