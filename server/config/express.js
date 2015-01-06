@@ -53,7 +53,7 @@ module.exports = function(app, passport, db) {
         app.use(express.session({
             secret: 'MEAN',
             store: new mongoStore({
-                db: 'heroku_app32115226',
+                url: 'mongodb://gearshed:thisisthegearshed@ds063180.mongolab.com:63180/heroku_app32115226',
                 collection: 'sessions'
             })
         }));
