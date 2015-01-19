@@ -23,9 +23,11 @@ The Gearshed's sharing economy site is based on the MEEN Javascript stack and bo
 ### Acknowledgements
 The Full Stack JS Boilerplate is created by [Martin Genev](http://www.twitter.com/cyberseer) of [Gemini Connect](http://www.geminiconnect.com) and is largely based on the work of [Amos Haviv](https://twitter.com/amoshaviv) on [meanjs.org](http://www.meanjs.org) 
 
-To Do:
+### To Do:
 
 + Change Image storage to remote storage (perhaps aws?) since Heroku doesn't allow for storage
++ Usernames, avatars, and locations on items currently only display for the user that made them
++ All dates on items currently marked as today
 + Finish Search
 	+ General Search of Title, Category, and Description
 	+ Location search using Google Geocoder
