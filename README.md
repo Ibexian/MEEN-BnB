@@ -58,7 +58,7 @@ $ npm install -g bower
 
 ### To Do:
 
-[Alpha]
+####[Alpha]
 + Change Image storage to remote storage (perhaps aws?) since Heroku doesn't allow for storage
 + Usernames, avatars, and locations on items currently only display for the user that made them
 + All dates on items currently marked as today
@@ -68,14 +68,14 @@ $ npm install -g bower
 + Buy/Edit buttons - show 'buy' if the item isn't mine - 'edit' if it is
 + "Orders" Section of Site - when a user places an order this section will have that order - a connection between two users 
 
-[Beta]
+####[Beta]
 + Stripe Functionality
 	+ Buy button to link up with purchases
 	+ Server side implementation of purchases
 	+ Verify we have a way to remit payments to person renting 
 + Google and Facebook Logins
 
-[1.0]
+####[1.0]
 + Email system
 + Confirmation of return
 + Review system
