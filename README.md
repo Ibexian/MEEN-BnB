@@ -29,21 +29,12 @@ The Full Stack JS Boilerplate is created by [Martin Genev](http://www.twitter.co
 
 ### Tools Prerequisites
 * NPM - Node.js package manager, should be installed when you install node.js.
+* Grunt - Download and Install [Grunt](http://gruntjs.com).
 * Bower - Web package manager, installing [Bower](http://bower.io/) is simple when you have npm:
 
 ```
 $ npm install -g bower
 ```
-
-### Optional
-* Grunt - Download and Install [Grunt](http://gruntjs.com).
-
-## Additional Packages
-* Express - Defined as npm module in the [package.json](package.json) file.
-* Mongoose - Defined as npm module in the [package.json](package.json) file.
-* Passport - Defined as npm module in the [package.json](package.json) file.
-* EmberJs - Defined as bower module in the [bower.json](bower.json) file.
-* Twitter Bootstrap for Sass - Defined as bower module in the [bower.json](bower.json) file.
 
 ## Quick Install
   The quickest way to get started with MEAN is to clone the project and utilize it like this:
