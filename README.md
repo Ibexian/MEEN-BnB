@@ -25,6 +25,7 @@ The Full Stack JS Boilerplate is created by [Martin Genev](http://www.twitter.co
 
 ### To Do:
 
+[Alpha]
 + Change Image storage to remote storage (perhaps aws?) since Heroku doesn't allow for storage
 + Usernames, avatars, and locations on items currently only display for the user that made them
 + All dates on items currently marked as today
@@ -32,7 +33,9 @@ The Full Stack JS Boilerplate is created by [Martin Genev](http://www.twitter.co
 	+ General Search of Title, Category, and Description
 	+ Location search using Google Geocoder
 + Buy/Edit buttons
-+ Orders Section of Site
++ "Orders" Section of Site - when a user places an order this section will have that order - a connection between two users 
+
+[Beta]
 + Stripe Functionality
 	+ Buy button to link up with purchases
 	+ Server side implementation of purchases
