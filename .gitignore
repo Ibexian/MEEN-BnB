@@ -8,3 +8,4 @@ package_bak.json
 npm-debug.log
 
 *.sublime-project
+*.sublime-workspace
