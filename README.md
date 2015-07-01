@@ -1,7 +1,4 @@
-GearShed 
-==========================
-
-The Gearshed's sharing economy site is based on the MEEN Javascript stack and boilerplate (see Acknowledgements below)
+This is a repo for an AirBnB clone based on the MEEN Javascript stack and boilerplate (see Acknowledgements below)
 
 ### Technology Used
 
@@ -54,29 +51,3 @@ $ npm install -g bower
   Then open a browser and go to:
 
     http://localhost:3000
-
-
-### To Do:
-
-####[Alpha]
-+ Change Image storage to remote storage (perhaps aws?) since Heroku doesn't allow for storage
-+ Usernames, avatars, and locations on items currently only display for the user that made them
-+ All dates on items currently marked as today
-+ Finish Search
-	+ General Search of Title, Category, and Description
-	+ Location search using Google Geocoder
-+ Buy/Edit buttons - show 'buy' if the item isn't mine - 'edit' if it is
-+ "Orders" Section of Site - when a user places an order this section will have that order - a connection between two users 
-
-####[Beta]
-+ Stripe Functionality
-	+ Buy button to link up with purchases
-	+ Server side implementation of purchases
-	+ Verify we have a way to remit payments to person renting 
-+ Google and Facebook Logins
-
-####[1.0]
-+ Email system
-+ Confirmation of return
-+ Review system
-+ Message system internally - doesn't make them deal with one another
